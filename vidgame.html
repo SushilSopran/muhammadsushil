@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<style>
+    /* Global Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Modal Styles */
+    .modal-content {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .modal-header {
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .modal-title {
+        font-size: 1.10rem;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .score {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        font-size: 1.10rem;
+        font-weight: bold;
+    }
+
+    .modal-body {
+        padding: 20px;
+    }
+
+    .modal-footer {
+        padding: 15px;
+        border-top: 1px solid #ddd;
+        text-align: right;
+    }
+
+    /* Face Styles */
+    .face {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: #c9c9c9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+    }
+
+    .eyes {
+        position: relative;
+        display: flex;
+    }
+
+    .eye {
+        width: 80px;
+        height: 80px;
+        background: #fff;
+        margin: 0 15px;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .eye::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        background: #000;
+        border-radius: 50%;
+    }
+
+    /* Instruction Styles */
+    .instruction {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-size: 14px;
+        color: #161616;
+    }
+
+    /* Media Query for Small Screens */
+    @media screen and (max-width: 600px) {
+        .instruction {
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .face {
+            width: 200px;
+            height: 200px;
+        }
+
+        .eye {
+            width: 60px;
+            height: 60px;
+        }
+
+        .eye::before {
+            width: 30px;
+            height: 30px;
+        }
+
+    /* Custom CSS for JioPhone */
+    @media screen and (max-width: 240px) and (max-height: 320px) {
+    .face {
+        width: 100px; /* Adjust width as needed */
+        height: 100px; /* Adjust height as needed */
+    }
+
+    .eye {
+        width: 30px; /* Adjust width as needed */
+        height: 30px; /* Adjust height as needed */
+    }
+
+    .eye::before {
+        width: 10px; /* Adjust width as needed */
+        height: 10px; /* Adjust height as needed */
+    }
+    }
+
+    @media screen and (max-width: 320px) and (max-height: 240px) {
+    .face {
+        width: 100px; /* Adjust width as needed */
+        height: 100px; /* Adjust height as needed */
+    }
+
+    .eye {
+        width: 30px; /* Adjust width as needed */
+        height: 30px; /* Adjust height as needed */
+    }
+
+    .eye::before {
+        width: 10px; /* Adjust width as needed */
+        height: 10px; /* Adjust height as needed */
+    }
+    }
+}
+
+    /* Custom Cursor Styles for Tablet and Mobile */
+    @media screen and (max-width: 1280px) {
+    #custom-cursor {
+        position: absolute;
+        display: none;
+        width: 50px;
+        height: 50px;
+        background: url('hand.png') center center no-repeat;
+        background-size: contain;
+        pointer-events: none;
+        z-index: 9999;
+        transition: transform 0.1s ease;
+        margin-top: 60px;
+        margin-left: 10px;
+    }
+}
+
+</style>
+<style>
+    .hero {
+        background-color: #ffffff;
+        position: relative;
+        height: 100vh; /* Adjusted height for full viewport height */
+        overflow: hidden;
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero__title {
+        --b: 3px;
+        --s: .15em;
+        --c: #2e2e2e;
+        padding: calc(.05em + var(--s)) calc(.3em + var(--s));
+        color: var(--c);
+        --_p: var(--s);
+        background: conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--c) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+        transition: .3s linear, color 0s, background-color 0s;
+        outline: var(--b) solid #0000;
+        outline-offset: .2em;
+        font-family: system-ui, sans-serif;
+        font-weight: bold;
+        font-size: 2rem;
+        cursor: pointer;
+        border: none;
+        margin: 0;
+        text-align: center;
+    }
+
+    .hero__title:hover,
+    .hero__title:focus-visible {
+        --_p: 0px;
+        outline-color: var(--c);
+        outline-offset: .05em;
+    }
+
+    .hero__title:active {
+        background: var(--c);
+        color: #fff;
+    }
+
+    .circle {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #181818;
+        transform: scale(0);
+        animation: circle 12s ease-in forwards infinite;
+    }
+
+    .circle:nth-child(2n) {
+        background-color: #686868;
+    }
+
+    .circle:nth-child(2) {
+        animation-delay: 2s;
+        left: 25vw;
+        top: 40vh;
+    }
+
+    .circle:nth-child(3) {
+        animation-delay: 4s;
+        left: 75vw;
+        top: 50vh;
+    }
+
+    .circle:nth-child(4) {
+        animation-delay: 6s;
+        left: 90vw;
+        top: 10vh;
+    }
+
+    .circle:nth-child(5) {
+        animation-delay: 8s;
+        left: 10vw;
+        top: 85vh;
+    }
+
+    .circle:nth-child(6) {
+        animation-delay: 10s;
+        left: 50vw;
+        top: 10vh;
+    }
+
+    @keyframes circle {
+        from {
+            transform: scale(0);
+            opacity: 1;
+        }
+        to {
+            transform: scale(20);
+            opacity: 0;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        /* Adjustments for smaller screens */
+        .hero__title {
+            font-size: 1.5rem;
+        }
+    }
+
+</style>
+<body>
+    <!-- The modal -->
+    <div id="myModal" class="modal fade show">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Earn Rebate</h5>
+                    <div class="score" id="score">Score: 0</div> <!-- Score display -->
+                </div>
+                <div class="modal-body">
+                    <!-- Video game screen content -->
+                    <div class="row justify-content-center align-items-center" style="height: 100%;">
+                        <div class="col-12 col-md-6">
+                            <div class="instruction">Hold + Circle</div>
+                            <div class="face">
+                                <div class="eyes">
+                                    <div class="eye"></div>
+                                    <div class="eye"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    <!-- Greeting Modal -->
+<!-- Greeting Modal -->
+<div id="greetingModal" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Congratulations!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="greetingModalBody">
+                <div class="text-center">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"  onclick="window.location.href='index.html'">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <div class="modal-footer">
+                    <!-- Remove the "x" icon -->
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"  onclick="window.location.href='index.html'">Exit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom cursor image for mobile -->
+    <div id="custom-cursor"></div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Open the modal
+        function openModal() {
+            var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
+                backdrop: 'static'
+            });
+            myModal.show();
+        }
+
+        // Custom cursor element (for mobile)
+        var customCursor = document.getElementById('custom-cursor');
+        // Face element
+        var face = document.querySelector('.face');
+        // Eye elements
+        var eyes = document.querySelectorAll('.eye');
+        // Score element
+        var scoreDisplay = document.getElementById('score');
+        // Score
+        var score = 0;
+
+        // Function to update custom cursor size based on viewport dimensions
+        function updateCursorSize() {
+            if (window.innerWidth <= 600) {
+                var viewportWidth = window.innerWidth;
+                var viewportHeight = window.innerHeight;
+                var cursorSize = Math.min(viewportWidth, viewportHeight) * 0.10; // Set cursor size to 5% of the smaller dimension
+
+                // Set custom cursor size
+                customCursor.style.width = cursorSize + 'px';
+                customCursor.style.height = cursorSize + 'px';
+            }
+        }
+
+        // Call the function initially and on window resize
+        updateCursorSize();
+        window.addEventListener('resize', updateCursorSize);
+
+        // Function to initialize custom cursor position at the center
+        function initializeCursorPosition() {
+            if (window.innerWidth <= 600) {
+                var faceRect = face.getBoundingClientRect();
+                var faceCenterX = faceRect.left + faceRect.width / 2;
+                var faceCenterY = faceRect.top + faceRect.height / 2;
+
+                customCursor.style.left = faceCenterX + 'px';
+                customCursor.style.top = faceCenterY + 'px';
+                customCursor.style.display = 'block'; // Show the cursor after setting its position
+            }
+        }
+
+        // Call the function to initialize cursor position
+        initializeCursorPosition();
+
+        // Variables for tracking rotation
+        var lastAngle = 0;
+        var fullRotations = 0;
+
+        // Function to update score
+        function updateScore() {
+            score++;
+            scoreDisplay.textContent = 'Score: ' + score;
+        }
+
+        // Function to reset score
+        function resetScore() {
+            score = 0;
+            scoreDisplay.textContent = 'Score: ' + score;
+        }
+
+        // Function to calculate angle between two points
+        function calculateAngle(x1, y1, x2, y2) {
+            return Math.atan2(y2 - y1, x2 - x1) * (180 / Math.PI);
+        }
+
+        // Add event listener for touch move
+        document.addEventListener("touchmove", function(event) {
+        // Prevent default touch behavior
+         event.preventDefault();
+
+        if (window.innerWidth <= 1280) {
+        // Get the touch position
+        var touch = event.touches[0];
+
+        // Update custom cursor position
+        customCursor.style.left = (touch.clientX - customCursor.offsetWidth / 2) + 'px';
+        customCursor.style.top = (touch.clientY - customCursor.offsetHeight / 2) + 'px';
+        }
+        }); 
+
+        // Add event listener for touch move
+    document.addEventListener("touchmove", function(event) {
+    // Prevent default touch behavior
+    event.preventDefault();
+
+    if (window.innerWidth <= 1280) {
+        // Get the touch position
+        var touch = event.touches[0];
+
+        // Update custom cursor position
+        customCursor.style.left = (touch.clientX - customCursor.offsetWidth / 2) + 'px';
+        customCursor.style.top = (touch.clientY - customCursor.offsetHeight / 2) + 'px';
+
+        // Make eyes follow touch movement
+        eyes.forEach(function(eye) {
+            let rect = eye.getBoundingClientRect();
+            let centerX = rect.left + (rect.width / 2);
+            let centerY = rect.top + (rect.height / 2);
+
+            let rad = Math.atan2(touch.clientX - centerX, touch.clientY - centerY);
+            let rot = (rad * (180 / Math.PI) * -1) + 270;
+            eye.style.transform = "rotate(" + rot + "deg)";
+        });
+    }
+    });
+
+    // Add event listener for touch move
+    document.addEventListener("touchmove", function(event) {
+    // Prevent default touch behavior
+    event.preventDefault();
+
+    if (window.innerWidth <= 1280) {
+        // Get the touch position
+        var touch = event.touches[0];
+
+        // Update custom cursor position
+        customCursor.style.left = (touch.clientX - customCursor.offsetWidth / 2) + 'px';
+        customCursor.style.top = (touch.clientY - customCursor.offsetHeight / 2) + 'px';
+
+        // Calculate the angle of the cursor relative to the center of the face
+        var faceRect = face.getBoundingClientRect();
+        var faceCenterX = faceRect.left + faceRect.width / 2;
+        var faceCenterY = faceRect.top + faceRect.height / 2;
+        var angle = calculateAngle(faceCenterX, faceCenterY, touch.clientX, touch.clientY);
+
+        // Detect full rotations
+        if ((lastAngle < 0 && angle > 0) || (lastAngle > 0 && angle < 0)) {
+            fullRotations++;
+            updateScore();
+        }
+        lastAngle = angle;
+
+        // Make eyes follow touch movement
+        eyes.forEach(function(eye) {
+            let rect = eye.getBoundingClientRect();
+            let centerX = rect.left + (rect.width / 2);
+            let centerY = rect.top + (rect.height / 2);
+
+            let rad = Math.atan2(touch.clientX - centerX, touch.clientY - centerY);
+            let rot = (rad * (180 / Math.PI) * -1) + 270;
+            eye.style.transform = "rotate(" + rot + "deg)";
+        });
+    }
+    });
+
+        // Add event listener for mouse move
+        document.addEventListener("mousemove", function(event) {
+            if (window.innerWidth > 600) {
+                // Make eyes follow cursor movement
+                eyes.forEach(function(eye) {
+                    let rect = eye.getBoundingClientRect();
+                    let centerX = rect.left + (rect.width / 2);
+                    let centerY = rect.top + (rect.height / 2);
+
+                    let rad = Math.atan2(event.clientX - centerX, event.clientY - centerY);
+                    let rot = (rad * (180 / Math.PI) * -1) + 270;
+                    eye.style.transform = "rotate(" + rot + "deg)";
+                });
+
+                // Calculate the angle of the cursor relative to the center of the face
+                var faceRect = face.getBoundingClientRect();
+                var faceCenterX = faceRect.left + faceRect.width / 2;
+                var faceCenterY = faceRect.top + faceRect.height / 2;
+                var angle = calculateAngle(faceCenterX, faceCenterY, event.clientX, event.clientY);
+
+                // Detect full rotations
+                if ((lastAngle < 0 && angle > 0) || (lastAngle > 0 && angle < 0)) {
+                    fullRotations++;
+                    updateScore();
+                }
+                lastAngle = angle;
+            }
+        });
+
+            // Add event listener for touch move
+            document.addEventListener ("touchmove", function(event) {
+            // Prevent default touch behavior
+            event.preventDefault();
+
+            if (window.innerWidth <= 600) {
+                // Get the touch position
+                var touch = event.touches[0];
+
+                // Update custom cursor position
+                customCursor.style.left = (touch.clientX - customCursor.offsetWidth / 2) + 'px';
+                customCursor.style.top = (touch.clientY - customCursor.offsetHeight / 2) + 'px';
+
+                // Calculate the angle of the cursor relative to the center of the face
+                var faceRect = face.getBoundingClientRect();
+                var faceCenterX = faceRect.left + faceRect.width / 2;
+                var faceCenterY = faceRect.top + faceRect.height / 2;
+                var angle = calculateAngle(faceCenterX, faceCenterY, touch.clientX, touch.clientY);
+
+                // Detect full rotations
+                if ((lastAngle < 0 && angle > 0) || (lastAngle > 0 && angle < 0)) {
+                    fullRotations++;
+                    updateScore();
+                }
+                lastAngle = angle;
+
+                // Make eyes follow touch movement
+                eyes.forEach(function(eye) {
+                    let rect = eye.getBoundingClientRect();
+                    let centerX = rect.left + (rect.width / 2);
+                    let centerY = rect.top + (rect.height / 2);
+
+                    let rad = Math.atan2(touch.clientX - centerX, touch.clientY - centerY);
+                    let rot = (rad * (180 / Math.PI) * -1) + 270;
+                    eye.style.transform = "rotate(" + rot + "deg)";
+                });
+            }
+        });
+
+        // Show custom cursor on touch start (mobile devices)
+        document.addEventListener("touchstart", function() {
+            if (window.innerWidth <= 600) {
+                customCursor.style.display = 'block';
+            }
+        });
+
+        // Hide custom cursor on touch end (mobile devices)
+        document.addEventListener("touchend", function() {
+            if (window.innerWidth <= 600) {
+                customCursor.style.display = 'none';
+            }
+        });
+
+        // Reset score when the modal is closed
+        var myModalEl = document.getElementById('myModal');
+        myModalEl.addEventListener('hidden.bs.modal', function () {
+            resetScore();
+        });
+    </script>
+    <script>
+        // Open the modal when the page loads
+        window.onload = function() {
+            var myModal = new bootstrap.Modal(document.getElementById('myModal'), {
+                backdrop: 'static'
+            });
+            myModal.show();
+        };
+    </script>
+    <script>
+    // Function to show a modal with a motivational greeting
+    function showGreetingModal(message) {
+    var greetingModal = new bootstrap.Modal(document.getElementById('greetingModal'), {
+        backdrop: 'static'
+    });
+    var greetingModalBody = document.getElementById('greetingModalBody');
+
+    // Clear existing content
+    greetingModalBody.innerHTML = '';
+
+    // Create the greeting message element
+    var greetingMessage = document.createElement('p');
+    greetingMessage.className = 'fs-4';
+    greetingMessage.textContent = '10% Discount Today. [Code: MS97391113]';
+    greetingModalBody.appendChild(greetingMessage);
+
+    // Show the modal
+    greetingModal.show();
+}
+
+    // Function to check the score and display a greeting modal if needed
+    // Boolean variable to track if the greeting modal has been shown
+    var greetingShown = false;
+
+    // Function to check the score and display a greeting modal if needed
+    function checkScore() {
+    if (score === 10 && !greetingShown) {
+        showGreetingModal("Try next time.");
+        greetingShown = true; // Set the flag to true to indicate that the greeting has been shown
+    }
+    }
+
+    // Function to update score
+    function updateScore() {
+    if (!greetingShown) { // Check if the greeting has been shown
+        score++;
+        scoreDisplay.textContent = 'Score: ' + score;
+        // Check if the score reached any milestone
+        checkScore();
+    }
+    }
+
+    // Reset score when the modal is closed
+    var myModalEl = document.getElementById('myModal');
+    myModalEl.addEventListener('hidden.bs.modal', function () {
+    resetScore();
+    greetingShown = false; // Reset the flag when the modal is closed
+});
+</script>
+
+</body>
+</html>

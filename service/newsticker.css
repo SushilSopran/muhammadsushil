@@ -1,0 +1,17 @@
+.ticker-wrap {
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(22, 22, 22, 0.952);
+  }
+  
+  .ticker {
+    white-space: nowrap;
+  }
+  
+  .ticker__item {
+    display: inline-block;
+    padding: 10px; /* Adjust spacing between items */
+    font-size: 18px; /* Adjust font size */
+    color: white;
+  }
+  

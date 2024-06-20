@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Card with Flip Animation | CodingLab</title>
+  <link rel="stylesheet" href="about-animation-style.css">
+  <!-- Link for Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<style>
+  .image-container img {
+  max-width: 100%; /* Limit image width to the container width */
+  max-height: 100%; /* Limit image height to the container height */
+  object-fit: contain; /* Ensure the entire image fits within the container */
+  }
+
+  .image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="flip-card">
+      <div class="front card">
+        <div class="image-container">
+          <img src="pic.jpg" alt="Profile Picture">
+        </div>
+      </div>
+      <div class="back card">
+        <span class="home-logo">
+          <!-- Thumb up icon -->
+          <span class="icon material-icons">thumb_up</span>
+        </span>
+        <span class="num">30 Clients in 10 Years</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

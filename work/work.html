@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+            e.preventDefault();
+        }
+    });
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Muhammad Sushil | Works</title>
+    <link rel="stylesheet" href="../loading.css">
+<!--Favicon-->
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="icon" type="image/x-icon" href="/assets/favicon.png" class="icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<!--For mobile app icon-->
+<!-- For iOS -->
+<link rel="apple-touch-icon" href="/assets/app-icon.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/app-icon.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/app-icon.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/app-icon.png">
+<!-- For Android -->
+<link rel="manifest" href="andoid.json">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+     <!-- Other meta tags and stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+     * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+      background-color: #f3f3f3;
+    }
+    /* Make the image fully responsive */
+    .carousel-inner img {
+    width: 100%;
+    height: 100%;
+    }
+    </style>
+    <style>
+    /* Custom styles */
+        .navbar-toggler {
+          border: none;
+        }
+
+        .navbar-toggler:focus {
+          outline: none;
+          box-shadow: none;
+        }
+    
+        .sidebar {
+          height: 100%;
+          width: 250px;
+          position: fixed;
+          top: 0;
+          left: -250px;
+          background-color: #111;
+          transition: 0.3s;
+          padding-top: 60px;
+          z-index: 1030;
+        }
+    
+        .sidebar a {
+          padding: 10px 15px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+        }
+    
+        .sidebar a:hover {
+          color: #ffffff;
+        }
+    
+        .sidebar .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+        }
+    
+        .sidebar.active {
+          left: 0;
+        }
+    
+        .overlay {
+          display: none;
+          position: fixed;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          background-color: rgba(0,0,0,0.5);
+          z-index: 1020;
+        }
+    
+        .overlay.active {
+          display: block;
+        }
+    
+        .social-icons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        }
+    
+      /* Ensure responsive design */
+      @media (max-width: 600px) {
+      .w3-bar .w3-button {
+        padding: 12px;
+      }
+    
+      .w3-display-left {
+        padding: 24px;
+      }
+    
+      .social-icons {
+        padding: 12px 24px;
+      }
+    }
+    
+    @media (min-width: 320px) {
+      .w3-bar .w3-button {
+        padding: 12px;
+      }
+    
+      .w3-display-left {
+        padding: 10px;
+      }
+    
+      .social-icons {
+        padding: 12px 24px;
+      }
+    }
+    @media only screen and (max-width: 768px) {
+                .text-banner-container {
+                    font-size: 18px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                .tab-titles{
+                  margin: 0px 0 40px; /*0 top, 0 lr, 40 bottom*/
+                }
+            }
+       
+    </style>
+    <style>
+      .mySlides {display:none}
+      .w3-left, .w3-right, .w3-badge {cursor:pointer}
+      .w3-badge {height:13px;width:13px;padding:0}
+    </style>    
+</head>
+<body oncontextmenu="return false;">
+<!--Loading-->
+
+<div class="loader"></div>
+<script>
+    window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+
+    loader.classList.add("loader--hidden");
+
+    loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+    });
+    });
+</script>
+<script src="../load.js"></script>
+    <!-- Navbar (sit on top) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html" onclick="scrollToCustomView()">
+      <span style="color: #414141;font-family:Your Elegant Font, serif;font-weight: 1000;">Muhammad</span><span style="color: #131313; font-family:Your Elegant Font, serif;font-weight: 1200;"> Sushil</span>
+    </a>
+    <button class="navbar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../about/about.html"><i class="fa fa-user"></i> ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../service/outsourcing.html"><i class="fa fa-thumbs-up"></i> OUTSOURCING</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa fa-briefcase"></i> WORKS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../contact/contact.html"><i class="fa fa-envelope"></i> CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+    <!-- Sidebar for mobile -->
+    <div id="sidebar" class="sidebar">
+     <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">×</a>
+     <a href="../about/about.html" onclick="toggleSidebar()">ABOUT</a>
+     <a href="../service/outsourcing.html" onclick="toggleSidebar()">OUTSOURCING</a>
+     <a href="#" onclick="toggleSidebar()">WORKS</a>
+     <a href="../contact/contact.html" onclick="toggleSidebar()">CONTACT</a>
+    </div>
+
+     <!-- Overlay for sidebar -->
+     <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:10px; padding-bottom: 30px;" id="showcase">
+      <h1 class="w3-jumbo"><b>Work</b></h1>
+      <h1 class="w3-xxxlarge w3-text-dark-grey"><b>Showcase.</b></h1>
+    </div>
+
+     <!-- Contact/Area Container -->
+     <div class="w3-container" id="where" style="padding-bottom:32px;">
+      <div class="w3-content" style="max-width:700px">
+        <img class="img-ef" src="images/design1.png" style="width:100%;">
+        <br><br>
+        <p style="font-family: sans-serif; font-size: 20px; padding-bottom: 10px;">The Warong Daun, a local restaurant in Malaysia, transformed its management system effectively with our comprehensive web-based restaurant system. We assist in enhancing their operations and sales. Our solution boosted customer engagement, revolutionizing their selling and buying platforms seamlessly.</p>
+        <br><br><br>
+        <img class="img-ef" src="images/design2.png" style="width:100%;">
+        <br><br>
+        <p style="font-family: sans-serif; font-size: 20px; padding-bottom: 10px;">This client upgraded their management system from old-school to futuristic to enhance their business efficiency and fueling growth. Committed to future investments, they are very poised for continued success and expansion.</p>
+        <p>&#40;Note: Permission granted for us to display some parts of this client's testing application product&#41;</p>
+      </div>
+    </div>
+
+    <style>
+      .img-ef {
+  --g: 4px;     /* the gap */
+  --b: 12px;    /* border thickness*/
+  --c: #131313; /* the color */
+  
+  
+  padding: calc(var(--g) + var(--b));
+  --_c: #e4e4e4f6 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg ,var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+  background:
+    var(--_g1) var(--_p, 25%) 0   ,var(--_g2) 0    var(--_p,125%),
+    var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b),var(--b) 200%;
+  cursor: pointer;
+  filter: grayscale(50%);
+  transition: .3s;
+}
+.img-ef:hover {
+  --_p: 75%;
+  filter: grayscale(0%);
+}
+    </style>
+
+    <style>
+      .mySlides {display:none}
+      .w3-tag, .fa {cursor:pointer}
+      .w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+    </style>
+  
+    <script>
+    // Slideshow
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demodots");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length} ;
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-white", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-white";
+    }
+    </script>
+
+    <!--What else?-->
+    <div class="w3-container w3-black w3-center w3-padding-64">
+      <div class="upperline"></div>
+      <h1 class="w3-margin w3-xlarge">NEXT ACHIEVEMENT</h1>
+      <div class="underline"></div>
+    </div>
+
+    <style>
+    
+
+.w3-container {
+  position: relative;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%; /* Initial width of the underline */
+  height: 1px;
+  background-color: #e4e4e4; /* White color */
+  animation: moveUnderline 3s linear infinite; /* Adjusted animation settings */
+}
+
+@keyframes moveUnderline {
+  0% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.upperline {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(50%);
+  width: 100%; /* Initial width of the underline */
+  height: 1px;
+  background-color: #e4e4e4; /* White color */
+  animation: Upperline 3s linear infinite; /* Adjusted animation settings */
+}
+
+@keyframes Upperline {
+  0% {
+    transform: translateX(50%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+    </style>
+
+    <!-- Example HTML with Bootstrap classes -->
+    <div class="container-fluid">
+      <img src="images/dd0b755359210559399602a501a.jpg" class="full-width-image" alt="Responsive image">
+    </div>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container-fluid {
+      padding: 0;
+    }
+  
+    .full-width-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      min-height: 100vh; /* Minimum height of viewport */
+      object-fit: cover; /* Ensure the image covers the entire container */
+    }
+    </style>
+
+      <!-- Header -->
+  <header class="w3-container w3-center w3-padding-48 w3-white">
+    <h1 class="w3-xxxlarge"><b>Games Live</b></h1>
+    <br>
+    <p style="font-family: sans-serif; font-size: 20px; padding-bottom: 10px; padding-left: 30px; padding-right: 30px; line-height: 40px;">This project started as a prototype for market testing purposes. After a year, it evolved significantly, incorporating numerous features to become a complete product. The application underwent a 9-month trial phase to gauge response. Following this phase, the project scaled up to a larger scope. This project allows users to easily purchase video games via their smartphone and automatically connect to their desktop. While playing on their console, they can also watch live through the app. This project had limitations, one of which is that users cannot play directly on the phone. The main core of this project is that users can watch their video gameplay live on their phone, record it in high definition on-screen, and share it on social media while streaming.</p>
+    <p>&#40;Note: Permission granted for us to display some parts of this client's finished software product&#41;</p>
+  </header>
+
+   <!--Footer Section-->
+ <footer class="text-white text-center text-lg-start bg-black">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!--Grid row-->
+    <div class="row mt-4">
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-4">About company</h5>
+
+        <p>
+          Muhammad Sushil is a company with a medium-sized team based in Sarawak. The name 'Muhammad Sushil' also serves as a unique brand identity.
+        </p>
+
+        <p>
+          The founder Muhammad Sushil oversees all operations, but he does not work alone behind the scenes. All decisions are made collectively by his team.
+        </p>
+
+        <div class="mt-4">
+         <!-- Facebook -->
+         <a href="https://www.linkedin.com/in/muhammadsushil" target="_blank" type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-linkedin"></i></a>
+         <!-- Google + -->
+         <a href="mailto: mrshil884@gmail.com" target="_blank" type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-google"></i></a>
+         <img src="../assets/footer.png" width="47" height="45" style="border-radius: 4px;">
+        </div>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-4 pb-1">Know More</h5>
+        <div class="form-outline form-white mb-4">
+          <button type="submit" class="btn btn-outline-light mb-4" onclick="window.location.href='/contact/contact.html';">
+            Ask Us
+          </button>
+        </div>
+
+        <ul class="fa-ul" style="margin-left: 1.65em;">
+          <li class="mb-3">
+            <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Kuching, 93250, Sarawak</span>
+          </li>
+          <li class="mb-3">
+            <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">mrshil884@gmail.com</span>
+          </li>
+          <li class="mb-3">
+            <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+60168399849</span>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-4">Opening hours &#40;Malaysia&nbsp;Time&#41;</h5>
+
+        <table class="table text-center text-white">
+          <tbody class="fw-normal">
+            <tr>
+              <td>Mon - Thu:</td>
+              <td>8am - 12pm</td>
+            </tr>
+            <tr>
+              <td>Fri - Sat:</td>
+              <td>10am - 1pm</td>
+            </tr>
+            <tr>
+              <td>Sunday:</td>
+              <td>10am - 1pm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgb(0, 0, 0);">
+    © 2024 Copyright:
+    <a class="text-white" style="text-decoration: none;">Owned by Muhammad Sushil</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+  
+    <!-- Bootstrap JS, jQuery, and custom JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+    <script>
+    function toggleSidebar() { 
+    var sidebar = document.getElementById("sidebar");
+    var overlay = document.getElementById("overlay");
+    if (sidebar.classList.contains('active')) {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+    } else {
+      sidebar.classList.add('active');
+      overlay.classList.add('active');
+    }
+      }
+    </script>
+
+  <script>
+  // Toggle between showing and hiding the sidebar when clicking the menu icon
+  var mySidebar = document.getElementById("mySidebar");
+  
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+  
+  // Close the sidebar with the close button
+  function w3_close() {
+      mySidebar.style.display = "none";
+  }
+  </script>
+  
+  <script>
+  function scrollToCustomView() {
+    const header = document.getElementById('header');
+    const about = document.getElementById('about');
+
+    const headerRect = header.getBoundingClientRect();
+    const aboutRect = about.getBoundingClientRect();
+
+    const scrollToY = window.scrollY + headerRect.top + (headerRect.height / 21);
+
+    window.scrollTo({
+      top: scrollToY,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, rgb(165, 165, 165), rgb(221, 221, 221));
+}
+
+.wrapper {
+  position: relative;
+  height: 330px;
+  width: 620px;
+  perspective: 1000px;
+  margin-bottom: 20px; /* Add margin to create space below the animation */
+}
+
+.wrapper .flip-card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: black;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+}
+
+.wrapper:hover .flip-card {
+  transform: rotateY(180deg);
+}
+
+.flip-card .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: white;
+  border-top: 2px solid rgb(126, 126, 126);
+  border-left: 2px solid rgb(126, 126, 126);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.card .image {
+  background-image: url('about-pic.jpg');
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.back.card {
+  transform: rotateY(180deg);
+}
+
+.back.card .home-logo {
+  position: relative;
+  height: 65px;
+  width: 65px;
+  border: 5px solid rgb(39, 39, 39);
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+/* Styling for the thumb up icon */
+.home-logo .icon {
+  position: relative;
+  top: 35%;
+  left: 43%;
+  transform: translate(-35%, -43%) translateY(6px);
+  display: inline-block;
+  font-size: 40px; /* Adjust size as needed */
+  color: rgb(39, 39, 39); /* Color same as border */
+}
+
+/* Center the icon vertically and horizontally */
+.icon.material-icons {
+  vertical-align: middle;
+}
+
+.back.card .num{
+  font-size: 25px;
+  font-weight: 600;
+  color: rgb(39, 39, 39);
+}
+
+.space {
+  height: 20px; /* Adjust the height as needed */
+}
+
+@media screen and (max-width: 600px) {
+
+  .wrapper {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    perspective: 1000px;
+    margin-bottom: 20px; /* Add margin to create space below the animation */
+  }
+  
+  .wrapper .flip-card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: black;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+  }
+  
+  .wrapper:hover .flip-card {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: white;
+    border-top: 2px solid rgb(126, 126, 126);
+    border-left: 2px solid rgb(126, 126, 126);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden;
+    position: absolute;
+  }
+  
+  .back.card {
+    transform: rotateY(180deg);
+  }
+  
+  .back.card .home-logo {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border: 5px solid rgb(39, 39, 39);
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+  
+  /* Styling for the thumb up icon */
+  .home-logo .icon {
+    position: relative;
+    top: 27%;
+    left: 42%;
+    transform: translate(-35%, -43%) translateY(6px);
+    display: inline-block;
+    font-size: 30px; /* Adjust size as needed */
+    color: rgb(39, 39, 39); /* Color same as border */
+  }
+  
+  /* Center the icon vertically and horizontally */
+  .icon.material-icons {
+    vertical-align: middle;
+  }
+  
+  .back.card .num{
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(39, 39, 39);
+  }
+  
+}
+
+
+@media  all and (max-width: 320px), all and (max-height: 240px) {
+
+  .wrapper {
+    position: relative;
+    height: 140px;
+    width: 240px;
+    perspective: 1000px;
+    margin-bottom: 20px; /* Add margin to create space below the animation */
+  }
+  
+  .wrapper .flip-card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: black;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+  }
+  
+  .wrapper:hover .flip-card {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: white;
+    border-top: 2px solid rgb(126, 126, 126);
+    border-left: 2px solid rgb(126, 126, 126);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden;
+    position: absolute;
+  }
+  
+  .card .image {
+    background-image: url('about-pic.jpg');
+    background-size: cover;
+    width: 136px;
+    height: 136px;
+  }
+  
+  .back.card {
+    transform: rotateY(180deg);
+  }
+  
+  .back.card .home-logo {
+    position: relative;
+    height: 35px;
+    width: 35px;
+    border: 5px solid rgb(39, 39, 39);
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+  
+  /* Styling for the thumb up icon */
+  .home-logo .icon {
+    position: relative;
+    top: 5%;
+    left: 43%;
+    transform: translate(-35%, -43%) translateY(6px);
+    display: inline-block;
+    font-size: 20px; /* Adjust size as needed */
+    color: rgb(39, 39, 39); /* Color same as border */
+  }
+  
+  /* Center the icon vertically and horizontally */
+  .icon.material-icons {
+    vertical-align: middle;
+  }
+  
+  .back.card .num{
+    font-size: 10px;
+    font-weight: 600;
+    color: rgb(39, 39, 39);
+  }
+  
+}
+
+@media  all and (max-width: 240px), all and (max-height: 320px) {
+
+  .wrapper {
+    position: relative;
+    height: 140px;
+    width: 220px;
+    perspective: 1000px;
+    margin-bottom: 20px; /* Add margin to create space below the animation */
+  }
+    
+}
+
+@media  all and (width: 600px), all and (height: 1024px) {
+
+  .wrapper {
+    position: relative;
+    height: 300px;
+    width: 470px;
+    perspective: 1000px;
+    margin-bottom: 20px; /* Add margin to create space below the animation */
+  }
+
+  .card .image {
+    background-image: url('about-pic.jpg');
+    background-size: cover;
+    width: 290px;
+    height: 290px;
+  }
+  
+  .back.card .num{
+    font-size: 28px;
+    font-weight: 600;
+    color: rgb(39, 39, 39);
+  }
+    
+}
+
+@media  all and (width: 320px), all and (height: 658px) {
+
+  .wrapper {
+    position: relative;
+    height: 280px;
+    width: 300px;
+    perspective: 1000px;
+    margin-bottom: 20px; /* Add margin to create space below the animation */
+  }
+
+  .card .image {
+    background-image: url('about-pic.jpg');
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+  }
+  
+  .back.card .num{
+    font-size: 21px;
+    font-weight: 550;
+    color: rgb(39, 39, 39);
+  }
+ 
+  .home-logo .icon {
+    position: relative;
+    top: 5%;
+    left: 43%;
+    transform: translate(-35%, -43%) translateY(6px);
+    display: inline-block;
+    font-size: 19px; /* Adjust size as needed */
+    color: rgb(39, 39, 39); /* Color same as border */
+  }
+
+  .back.card .home-logo {
+    position: relative;
+    height: 35px;
+    width: 35px;
+    border: 4px solid rgb(39, 39, 39);
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+  
+
+}
+
+@media  all and (width: 640px), all and (height: 360px) {
+
+  .wrapper {
+    position: relative;
+    height: 230px;
+    width: 470px;
+    perspective: 1000px;
+    margin-bottom: 20px; /* Add margin to create space below the animation */
+  }
+
+  .card .image {
+    background-image: url('about-pic.jpg');
+    background-size: cover;
+    width: 210px;
+    height: 210px;
+  }
+  
+  .back.card .num{
+    font-size: 28px;
+    font-weight: 600;
+    color: rgb(39, 39, 39);
+  }
+    
+}
+
+@media  all and (width: 740px), all and (height: 360px) {
+
+  .wrapper {
+    position: relative;
+    height: 200px;
+    width: 450px;
+    perspective: 1000px;
+    margin-bottom: 20px; /* Add margin to create space below the animation */
+  }
+
+  .card .image {
+    background-image: url('about-pic.jpg');
+    background-size: cover;
+    width: 196px;
+    height: 196px;
+  }
+
+}
+
+@media  all and (width: 658px), all and (height: 320px) {
+
+  .wrapper {
+    position: relative;
+    height: 188px;
+    width: 470px;
+    perspective: 1000px;
+    margin-bottom: 20px; /* Add margin to create space below the animation */
+  }
+
+  .card .image {
+    background-image: url('about-pic.jpg');
+    background-size: cover;
+    width: 178px;
+    height: 178px;
+  }
+
+}
+
+@media  all and (width: 823px), all and (height: 412px) {
+
+  .wrapper {
+    position: relative;
+    height: 250px;
+    width: 470px;
+    perspective: 1000px;
+    margin-bottom: 20px; /* Add margin to create space below the animation */
+  }
+
+  .card .image {
+    background-image: url('about-pic.jpg');
+    background-size: cover;
+    width: 230px;
+    height: 230px;
+  }
+
+}
+
+@media  all and (width: 745px), all and (height: 353px) {
+
+  .wrapper {
+    position: relative;
+    height: 200px;
+    width: 450px;
+    perspective: 1000px;
+    margin-bottom: 20px; /* Add margin to create space below the animation */
+  }
+
+  .card .image {
+    background-image: url('about-pic.jpg');
+    background-size: cover;
+    width: 196px;
+    height: 196px;
+  }
+
+}
+
+@media  all and (width: 480px), all and (height: 854px) {
+
+  .wrapper {
+    position: relative;
+    height: 310px;
+    width: 450px;
+    perspective: 1000px;
+    margin-bottom: 20px; /* Add margin to create space below the animation */
+  }
+
+  .card .image {
+    background-image: url('about-pic.jpg');
+    background-size: cover;
+    width: 296px;
+    height: 296px;
+  }
+
+  .back.card .num{
+    font-size: 28px;
+    font-weight: 600;
+    color: rgb(39, 39, 39);
+  }
+
+}
+
+@media  all and (width: 533px), all and (height: 320px) {
+
+  .wrapper {
+    position: relative;
+    height: 200px;
+    width: 450px;
+    perspective: 1000px;
+    margin-bottom: 20px; /* Add margin to create space below the animation */
+  }
+
+  .card .image {
+    background-image: url('about-pic.jpg');
+    background-size: cover;
+    width: 196px;
+    height: 196px;
+  }
+
+}
+
+@media  all and (width: 732px), all and (height: 412px) {
+
+  .wrapper {
+    position: relative;
+    height: 240px;
+    width: 450px;
+    perspective: 1000px;
+    margin-bottom: 20px; /* Add margin to create space below the animation */
+  }
+
+  .card .image {
+    background-image: url('about-pic.jpg');
+    background-size: cover;
+    width: 216px;
+    height: 216px;
+  }
+
+}
+
+@media  all and (width: 412px), all and (height: 732px) {
+
+  .wrapper {
+    position: relative;
+    height: 300px;
+    width: 370px;
+    perspective: 1000px;
+    margin-bottom: 20px; /* Add margin to create space below the animation */
+  }
+
+  .card .image {
+    background-image: url('about-pic.jpg');
+    background-size: cover;
+    width: 296px;
+    height: 296px;
+  }
+
+}

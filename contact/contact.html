@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+            e.preventDefault();
+        }
+    });
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Muhammad Sushil | Contact Us</title>
+<link rel="stylesheet" href="../loading.css">
+<!--Favicon-->
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="icon" type="image/x-icon" href="/assets/favicon.png" class="icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<!--For mobile app icon-->
+<!-- For iOS -->
+<link rel="apple-touch-icon" href="/assets/app-icon.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/app-icon.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/app-icon.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/app-icon.png">
+<!-- For Android -->
+<link rel="manifest" href="andoid.json">
+
+ <!-- Other meta tags and stylesheets -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Include Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        #msg {
+          color: #3d3d3d;
+          display: block;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+
+        body {
+        background-color: #f3f3f3;
+        }   
+
+        /* Custom styles */
+            .navbar-toggler {
+              border: none;
+            }
+    
+            .navbar-toggler:focus {
+              outline: none;
+              box-shadow: none;
+            }
+        
+            .sidebar {
+              height: 100%;
+              width: 250px;
+              position: fixed;
+              top: 0;
+              left: -250px;
+              background-color: #111;
+              transition: 0.3s;
+              padding-top: 60px;
+              z-index: 1030;
+            }
+        
+            .sidebar a {
+              padding: 10px 15px;
+              text-decoration: none;
+              font-size: 25px;
+              color: #818181;
+              display: block;
+              transition: 0.3s;
+            }
+        
+            .sidebar a:hover {
+              color: #ffffff;
+            }
+        
+            .sidebar .closebtn {
+              position: absolute;
+              top: 0;
+              right: 25px;
+              font-size: 36px;
+              margin-left: 50px;
+            }
+        
+            .sidebar.active {
+              left: 0;
+            }
+        
+            .overlay {
+              display: none;
+              position: fixed;
+              height: 100%;
+              width: 100%;
+              top: 0;
+              left: 0;
+              background-color: rgba(0,0,0,0.5);
+              z-index: 1020;
+            }
+        
+            .overlay.active {
+              display: block;
+            }
+        
+            .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            }
+        
+          /* Ensure responsive design */
+          @media (max-width: 600px) {
+          .w3-bar .w3-button {
+            padding: 12px;
+          }
+        
+          .w3-display-left {
+            padding: 24px;
+          }
+        
+          .social-icons {
+            padding: 12px 24px;
+          }
+        }
+        
+        @media (min-width: 320px) {
+          .w3-bar .w3-button {
+            padding: 12px;
+          }
+        
+          .w3-display-left {
+            padding: 10px;
+          }
+        
+          .social-icons {
+            padding: 12px 24px;
+          }
+        }
+        @media only screen and (max-width: 768px) {
+                    .text-banner-container {
+                        font-size: 18px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    .tab-titles{
+                      margin: 0px 0 40px; /*0 top, 0 lr, 40 bottom*/
+                    }
+                }
+           
+        </style>
+</head>
+<body oncontextmenu="return false;">
+  <!--Loading-->
+
+<div class="loader"></div>
+<script>
+    window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+
+    loader.classList.add("loader--hidden");
+
+    loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+    });
+    });
+</script>
+<script src="../load.js"></script>
+
+      <!-- Navbar (sit on top) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html" onclick="scrollToCustomView()">
+      <span style="color: #414141;font-family:Your Elegant Font, serif;font-weight: 1000;">Muhammad</span><span style="color: #131313; font-family:Your Elegant Font, serif;font-weight: 1200;"> Sushil</span>
+    </a>
+    <button class="navbar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../about/about.html"><i class="fa fa-user"></i> ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../service/outsourcing.html"><i class="fa fa-thumbs-up"></i> OUTSOURCING</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../work/work.html"><i class="fa fa-briefcase"></i> WORKS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa fa-envelope"></i> CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+    <!-- Sidebar for mobile -->
+    <div id="sidebar" class="sidebar">
+     <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">×</a>
+     <a href="../about/about.html" onclick="toggleSidebar()">ABOUT</a>
+     <a href="#" onclick="toggleSidebar()">OUTSOURCING</a>
+     <a href="../work/work.html" onclick="toggleSidebar()">WORKS</a>
+     <a href="#" onclick="toggleSidebar()">CONTACT</a>
+    </div>
+
+     <!-- Overlay for sidebar -->
+     <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+
+     
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:10px; padding-bottom: 30px;" id="showcase">
+      <h1 class="w3-jumbo"><b>Thank You</b></h1>
+      <h1 class="w3-xxxlarge w3-text-dark-grey"><b>For reaching out.</b></h1>
+    </div>
+
+    <!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Let's get in touch. Send us a message:</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Kuching, Sarawak</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +60168399849</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mrshil884@gmail.com</p>
+    <br>
+    <form name="submit-to-google-sheet" target="_blank"> <!--The form name just refer & go to line 348-->
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+    <span id="msg"></span>
+  </div>
+  <!-- Image of location/map -->
+<div class="w3-container" style="padding:13px; text-align: center;">
+  <img src="location.png" class="w3-image" style="width:100%;">
+</div>
+</div>
+
+    <!--Footer Section-->
+ <footer class="text-white text-center text-lg-start bg-black">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!--Grid row-->
+      <div class="row mt-4">
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">About company</h5>
+  
+          <p>
+            Muhammad Sushil is a company with a medium-sized team based in Sarawak. The name 'Muhammad Sushil' also serves as a unique brand identity.
+          </p>
+  
+          <p>
+            The founder Muhammad Sushil oversees all operations, but he does not work alone behind the scenes. All decisions are made collectively by his team.
+          </p>
+  
+          <div class="mt-4">
+           <!-- Facebook -->
+           <a href="https://www.linkedin.com/in/muhammadsushil" target="_blank" type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-linkedin"></i></a>
+           <!-- Google + -->
+           <a href="mailto: mrshil884@gmail.com" target="_blank" type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-google"></i></a>
+           <img src="../assets/footer.png" width="47" height="45" style="border-radius: 4px;">
+          </div>
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4 pb-1">Know More</h5>
+          <div class="form-outline form-white mb-4">
+            <button type="submit" class="btn btn-outline-light mb-4" onclick="scrollToCustomView()" target="_blank">
+              Ask Us
+            </button>
+          </div>
+  
+          <ul class="fa-ul" style="margin-left: 1.65em;">
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Kuching, 93250, Sarawak</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">mrshil884@gmail.com</span>
+            </li>
+            <li class="mb-3">
+              <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+60168399849</span>
+            </li>
+          </ul>
+        </div>
+        <!--Grid column-->
+  
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Opening hours &#40;Malaysia&nbsp;Time&#41;</h5>
+  
+          <table class="table text-center text-white">
+            <tbody class="fw-normal">
+              <tr>
+                <td>Mon - Thu:</td>
+                <td>8am - 12pm</td>
+              </tr>
+              <tr>
+                <td>Fri - Sat:</td>
+                <td>10am - 1pm</td>
+              </tr>
+              <tr>
+                <td>Sunday:</td>
+                <td>10am - 1pm</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!--Grid column-->
+      </div>
+      <!--Grid row-->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgb(0, 0, 0);">
+      © 2024 Copyright:
+      <a class="text-white" style="text-decoration: none;">Owned by Muhammad Sushil</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+  <script>
+    function toggleSidebar() { 
+    var sidebar = document.getElementById("sidebar");
+    var overlay = document.getElementById("overlay");
+    if (sidebar.classList.contains('active')) {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+    } else {
+      sidebar.classList.add('active');
+      overlay.classList.add('active');
+    }
+      }
+    </script>
+
+  <script>
+  // Toggle between showing and hiding the sidebar when clicking the menu icon
+  var mySidebar = document.getElementById("mySidebar");
+  
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+  
+  // Close the sidebar with the close button
+  function w3_close() {
+      mySidebar.style.display = "none";
+  }
+  </script>
+  
+  <script>
+  function scrollToCustomView() {
+    const header = document.getElementById('header');
+    const about = document.getElementById('about');
+
+    const headerRect = header.getBoundingClientRect();
+    const aboutRect = about.getBoundingClientRect();
+
+    const scrollToY = window.scrollY + headerRect.top + (headerRect.height / 21);
+
+    window.scrollTo({
+      top: scrollToY,
+      behavior: 'smooth'
+    });
+  }
+</script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyGzottWc29aFu9OHi5BOjgUMYZNEssfnGLevuYmKfhnz7hb6qqHB5uIoQcZaaD6Djeug/exec' /*Your Web App URL, Copy it from deployment Apps script*/
+  const form = document.forms['submit-to-google-sheet'] /*Go to line 195*/
+  const msg = document.getElementById("msg") /*Link to line 362*/
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {msg.innerHTML = "Message Submitted. You're awesome!" 
+        setTimeout(function(){
+          msg.innerHTML = ""
+        },7000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+<!--Refer to line 252-->
+<script>
+  function scrollToCustomView() {
+    const header = document.getElementById('showcase');
+    const about = document.getElementById('contact');
+
+    const headerRect = header.getBoundingClientRect();
+    const aboutRect = about.getBoundingClientRect();
+
+    const scrollToY = window.scrollY + headerRect.top + (headerRect.height / 1);
+
+    window.scrollTo({
+      top: scrollToY,
+      behavior: 'smooth'
+    });
+  }
+</script>
+</body>
+</html>

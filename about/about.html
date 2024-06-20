@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+            e.preventDefault();
+        }
+    });
+</script>
+<title>Muhammad Sushil | About Sushil</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="../loading.css">
+<!--Favicon-->
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="icon" type="image/x-icon" href="/assets/favicon.png" class="icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<!--For mobile app icon-->
+<!-- For iOS -->
+<link rel="apple-touch-icon" href="/assets/app-icon.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/app-icon.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/app-icon.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/app-icon.png">
+<!-- For Android -->
+<link rel="manifest" href="andoid.json">
+ <!-- Other meta tags and stylesheets -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Include Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+    body {
+      background-color: #f3f3f3;
+    }
+
+  .w3-panel {
+  display: flexbox; /* Use flexbox */
+  }
+
+  .w3-panel-content {
+  display: flexbox;
+  flex-direction: column; /* Make content inside "w3-twothird" flexbox */
+  height: 100%; /* Ensure it takes up the full height */
+  }
+
+</style>
+<style>
+/* Custom styles */
+.navbar-toggler {
+      border: none;
+    }
+
+    .navbar-toggler:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #111;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1030;
+    }
+
+    .sidebar a {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidebar .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 1020;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Ensure responsive design */
+@media (max-width: 600px) {
+  .w3-bar .w3-button {
+    padding: 12px;
+  }
+
+  .w3-display-left {
+    padding: 24px;
+  }
+
+  .social-icons {
+    padding: 12px 24px;
+  }
+}
+
+@media (min-width: 320px) {
+  .w3-bar .w3-button {
+    padding: 12px;
+  }
+
+  .w3-display-left {
+    padding: 10px;
+  }
+
+  .social-icons {
+    padding: 12px 24px;
+  }
+}
+@media only screen and (max-width: 768px) {
+            .text-banner-container {
+                font-size: 18px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            .tab-titles{
+              margin: 0px 0 40px; /*0 top, 0 lr, 40 bottom*/
+            }
+        }
+
+        
+</style>
+<style>
+    .icon-sect{
+    padding: 20px;
+    font-size: 30px;
+    width: 80px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    }
+    
+    .sect-icon1:hover {
+      background: #dd4b39;
+      color: white;
+      opacity: 0.5;
+      text-decoration: none;
+    }
+
+    .sect-icon2:hover {
+      background: #007bb5;
+      color: white;
+      opacity: 0.5;
+      text-decoration: none;
+    }
+
+    .sect-icon3:hover {
+      background: #053eff;
+      color: white;
+      opacity: 0.5;
+      text-decoration: none;
+    }
+
+    .sect-icon1 {
+    background: #dd4b39;
+    color: white;
+    }
+  
+    .sect-icon2 {
+    background: #007bb5;
+    color: white;
+    }
+  
+    .sect-icon3 {
+    background: #053eff;
+    color: white;
+    }
+</style>
+<!--Experiece Section-->
+<style>
+  .tab-titles{
+    display:flex;
+    margin: 0px 0 40px; /*0 top, 0 lr, 40 bottom*/
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #777777;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 6px 0;
+}
+
+.tab-contents ul li span{
+    color:darkslategrey;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
+}
+</style>
+<style>
+ @media only screen and (max-width: 768px) {       
+      .tab-titles{
+      display:contents;
+      margin: 0px 0 40px; /*0 top, 0 lr, 40 bottom*/
+      
+      }
+      .w3-half {
+        margin-top: 20px;
+      }
+      .tab-contents ul {
+        padding-left: 0;
+      }
+    }
+</style>
+</head>
+<body oncontextmenu="return false;">
+<!--Loading-->
+
+<div class="loader"></div>
+<script>
+    window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+
+    loader.classList.add("loader--hidden");
+
+    loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+    });
+    });
+</script>
+<script src="../load.js"></script>
+
+<!-- Navbar (sit on top) -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="../index.html" onclick="scrollToCustomView()">
+    <span style="color: #414141;font-family:Your Elegant Font, serif;font-weight: 1000;">Muhammad</span><span style="color: #131313; font-family:Your Elegant Font, serif;font-weight: 1200;"> Sushil</span>
+  </a>
+  <button class="navbar-toggler" type="button" onclick="toggleSidebar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fa fa-user"></i> ABOUT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/service/outsourcing.html"><i class="fa fa-thumbs-up"></i> OUTSOURCING</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/work/work.html"><i class="fa fa-briefcase"></i> WORKS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact/contact.html"><i class="fa fa-envelope"></i> CONTACT</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+  <!-- Sidebar for mobile -->
+  <div id="sidebar" class="sidebar">
+   <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">×</a>
+   <a href="#" onclick="toggleSidebar()">ABOUT</a>
+   <a href="/service/outsourcing.html" onclick="toggleSidebar()">OUTSOURCING</a>
+   <a href="/work/work.html" onclick="toggleSidebar()">WORKS</a>
+   <a href="/contact/contact.html" onclick="toggleSidebar()">CONTACT</a>
+  </div>
+
+  <!-- Overlay for sidebar -->
+  <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+ 
+  <!-- About Section -->
+      <!-- Header -->
+      <div class="w3-container" style="margin-top:10px; padding-left: 30px; padding-bottom: 30px;" id="showcase">
+        <h1 class="w3-jumbo"><b>About</b></h1>
+        <h1 class="w3-xxxlarge w3-text-dark-grey"><b>Sushil.</b></h1>
+      </div>
+    
+    <p style="padding-left: 30px; padding-right: 30px;">
+        Muhammad Sushil is a brand and founder, also known as Sushil, acting as an indie developer with more than 10 years experience. Currently, he is more focused on the scope of UX design. He considered himself a business designer, leveraging his technical skills to create practical, business-oriented solutions.
+    </p>
+    <br>
+    <p style="padding-left: 30px; padding-right: 30px;">
+        During childhood, he never tired of walking 20 minutes from home to his go-to cyber cafe just to learn about computing, using his school meal money. Sometimes, strange dogs would disturb his journey. When his parents found out his daily evening routine, they bought him a used Windows PC. The first thing he did was to experiment with C# language. From then on, he developed a love for the technical aspects of computers. During his teenage years, he discovered that building a website with multiple functions was the coolest thing.</p> 
+    <br>
+    <p style="padding-left: 30px; padding-right: 30px;">
+        Today, he and his team globally freelance, helping universal startups implement digital ideas into business realities. He still works on backend development, even though he spends more time on UX design. He is always ready to help anyone who wants to scale up their business with his uniquely talented approach. 
+     </p>
+
+    <h2 style="padding-left:30px; font-family: Arial, sans-serif; font-size: 28px; font-weight: bold;" class="w3-padding-16">Capabilities</h3>
+    <p style="padding-left: 30px;" class="w3-wide">Digital Platform</p>
+    <div style="padding-left: 30px; padding-right: 30px;" class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:100%">100%</div>
+    </div>
+    <p style="padding-left: 30px;" class="w3-wide">User Research</p>
+    <div style="padding-left: 30px; padding-right: 30px;" class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:100%">100%</div>
+    </div>
+    <p style="padding-left: 30px;" class="w3-wide">Information Architecture</p>
+    <div style="padding-left: 30px; padding-right: 30px;" class="w3-light-grey">
+      <div class="w3-container w3-center w3-padding-small w3-dark-grey" style="width:100%">100%</div>
+    </div><br><br>
+
+<!--Experience Section-->
+ <header style="padding-left: 30px; padding-right: 30px;">
+ <!--Column 1-->
+ <div class="w3-panel">
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="/assets/skills.jpg" style="width:100%" alt="Google Regional Map">
+    </div>
+  <!--Column 2-->
+    <div class="w3-half w3-panel-content">
+      <div class="tab-titles">
+        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+        <p class="tab-links" onclick="opentab('experience')">Experiences</p>
+        <p class="tab-links" onclick="opentab('education')">Education</p>
+      </div>
+      <div class="tab-contents active-tab" id="skills">
+        <ul>
+          <li><span>UI/UX</span><br>Designing Web/App Interface</li>
+          <li><span>Web Development</span><br>Web App Developement</li>
+          <li><span>App Development</span><br>Building Android/iOS Apps</li>
+          <li><span>Software Design</span><br>System Architecture</li>
+        </ul>
+      </div>
+      <div class="tab-contents" id="experience">
+        <ul>
+            <li><span>2024 - Current</span><br>Lifetime Freelancer at Muhammad Sushil Brand</li>
+            <li><span>2020 - 2023</span><br>Remote Website Developer</li>
+            <li><span>2015 - 2018</span><br>Backend Software Assistant at Sky-Decagon</li>
+            <li><span>2014 - 2015</span><br>Frontend Developer at AOZ Games</li>
+        </ul>
+    </div>
+    <div class="tab-contents" id="education">
+      <ul>
+          <li><span>2016</span><br>ICT STPM at SMK Tun Abang Haji Openg</li>
+          <li><span>2021</span><br>Bachelor of Social Science at National University of Malaysia (UKM)</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+   </div>
+ </header><br><br>
+
+    <div style="text-align: center; clear: both;">
+        <a href="mailto: mrshil884@gmail.com" class="fa fa-google icon-sect sect-icon1" target="_blank"></a>
+        <a href="https://www.linkedin.com/in/muhammadsushil" target="_blank" class="fa fa-linkedin icon-sect sect-icon2"></a>
+    </div>   
+
+    <br><br>
+    <div class="w3-row w3-center w3-black w3-padding-10">
+        <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">10+</span><br>
+        Partners
+        </div>
+        <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">200+</span><br>
+        Self-Projects Done
+        </div>
+        <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">50+</span><br>
+        Co-Broke Projects
+        </div>
+        <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">10+</span><br>
+        Programming Years
+    </div>
+
+    <div class="game-section" id="game-section">
+        <iframe src="about-animation.html" width="100%" height="500" frameborder="0"></iframe>
+    </div>
+
+
+  <!--Footer Section-->
+ <footer class="text-white text-center text-lg-start bg-black">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!--Grid row-->
+    <div class="row mt-4">
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-4">About company</h5>
+
+        <p>
+          Muhammad Sushil is a company with a medium-sized team based in Sarawak. The name 'Muhammad Sushil' also serves as a unique brand identity.
+        </p>
+
+        <p>
+          The founder Muhammad Sushil oversees all operations, but he does not work alone behind the scenes. All decisions are made collectively by his team.
+        </p>
+
+        <div class="mt-4">
+         <!-- Facebook -->
+         <a href="https://www.linkedin.com/in/muhammadsushil" target="_blank" type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-linkedin"></i></a>
+         <!-- Google + -->
+         <a href="mailto: mrshil884@gmail.com" target="_blank" type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-google"></i></a>
+         <img src="../assets/footer.png" width="47" height="45" style="border-radius: 4px;">
+        </div>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-4 pb-1">Know More</h5>
+        <div class="form-outline form-white mb-4">
+          <button type="submit" class="btn btn-outline-light mb-4" onclick="window.location.href='/contact/contact.html';">
+            Ask Us
+          </button>
+        </div>
+
+        <ul class="fa-ul" style="margin-left: 1.65em;">
+          <li class="mb-3">
+            <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Kuching, 93250, Sarawak</span>
+          </li>
+          <li class="mb-3">
+            <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">mrshil884@gmail.com</span>
+          </li>
+          <li class="mb-3">
+            <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+60168399849</span>
+          </li>
+        </ul>
+      </div>
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-4">Opening hours &#40;Malaysia&nbsp;Time&#41;</h5>
+
+        <table class="table text-center text-white">
+          <tbody class="fw-normal">
+            <tr>
+              <td>Mon - Thu:</td>
+              <td>8am - 12pm</td>
+            </tr>
+            <tr>
+              <td>Fri - Sat:</td>
+              <td>10am - 1pm</td>
+            </tr>
+            <tr>
+              <td>Sunday:</td>
+              <td>10am - 1pm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgb(0, 0, 0);">
+    © 2024 Copyright:
+    <a class="text-white" style="text-decoration: none;">Owned by Muhammad Sushil</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+  
+  <!-- Bootstrap JS, jQuery, and custom JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+<script>
+  function toggleSidebar() { 
+    var sidebar = document.getElementById("sidebar");
+    var overlay = document.getElementById("overlay");
+    if (sidebar.classList.contains('active')) {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+    } else {
+      sidebar.classList.add('active');
+      overlay.classList.add('active');
+    }
+  }
+</script>
+
+  <script>
+  // Toggle between showing and hiding the sidebar when clicking the menu icon
+  var mySidebar = document.getElementById("mySidebar");
+  
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+  
+  // Close the sidebar with the close button
+  function w3_close() {
+      mySidebar.style.display = "none";
+  }
+  </script>
+  
+  <script>
+  function scrollToCustomView() {
+    const header = document.getElementById('header');
+    const about = document.getElementById('about');
+
+    const headerRect = header.getBoundingClientRect();
+    const aboutRect = about.getBoundingClientRect();
+
+    const scrollToY = window.scrollY + headerRect.top + (headerRect.height / 21);
+
+    window.scrollTo({
+      top: scrollToY,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+<script>
+  function opentab(tabName) {
+      // Get the image element
+      var image = document.querySelector('.w3-half img');
+
+      // Depending on the tab clicked, change the image source
+      switch (tabName) {
+          case 'skills':
+              image.src = "/assets/skills.jpg";
+              break;
+          case 'experience':
+              image.src = "/assets/experience.jpg"; // Change this to the path of your experience image
+              break;
+          case 'education':
+              image.src = "/assets/education.jpg"; // Change this to the path of your education image
+              break;
+          default:
+              break;
+      }
+
+      // Get all tab links and contents
+      var tabLinks = document.getElementsByClassName("tab-links");
+      var tabContents = document.getElementsByClassName("tab-contents");
+
+      // Remove 'active-link' class from all tab links
+      for (var i = 0; i < tabLinks.length; i++) {
+          tabLinks[i].classList.remove("active-link");
+      }
+
+      // Remove 'active-tab' class from all tab contents
+      for (var i = 0; i < tabContents.length; i++) {
+          tabContents[i].classList.remove("active-tab");
+      }
+
+      // Add 'active-link' class to the clicked tab link
+      event.currentTarget.classList.add("active-link");
+
+      // Add 'active-tab' class to the corresponding tab content
+      document.getElementById(tabName).classList.add("active-tab");
+  }
+</script>
+
+</body>
+</html>

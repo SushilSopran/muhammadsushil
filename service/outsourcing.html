@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+            e.preventDefault();
+        }
+    });
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Muhammad Sushil | Our Services</title>
+    <link rel="stylesheet" href="../loading.css">
+<!--Favicon-->
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="icon" type="image/x-icon" href="/assets/favicon.png" class="icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<!--For mobile app icon-->
+<!-- For iOS -->
+<link rel="apple-touch-icon" href="/assets/app-icon.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/app-icon.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/app-icon.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/app-icon.png">
+<!-- For Android -->
+<link rel="manifest" href="andoid.json">
+    <link rel="stylesheet" href="newsticker.css">
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+ <!-- Other meta tags and stylesheets -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- Include Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="teasing.css">
+<style>
+   * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+  body {
+      background-color: #f3f3f3;
+    }
+
+/* Make the image fully responsive */
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+</style>
+<style>
+    /* Custom styles */
+    .navbar-toggler {
+          border: none;
+        }
+    
+        .navbar-toggler:focus {
+          outline: none;
+          box-shadow: none;
+        }
+    
+        .sidebar {
+          height: 100%;
+          width: 250px;
+          position: fixed;
+          top: 0;
+          left: -250px;
+          background-color: #111;
+          transition: 0.3s;
+          padding-top: 60px;
+          z-index: 1030;
+        }
+    
+        .sidebar a {
+          padding: 10px 15px;
+          text-decoration: none;
+          font-size: 25px;
+          color: #818181;
+          display: block;
+          transition: 0.3s;
+        }
+    
+        .sidebar a:hover {
+          color: #f1f1f1;
+        }
+    
+        .sidebar .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+        }
+    
+        .sidebar.active {
+          left: 0;
+        }
+    
+        .overlay {
+          display: none;
+          position: fixed;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          background-color: rgba(0,0,0,0.5);
+          z-index: 1020;
+        }
+    
+        .overlay.active {
+          display: block;
+        }
+    
+    .social-icons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    /* Ensure responsive design */
+    @media (max-width: 600px) {
+      .w3-bar .w3-button {
+        padding: 12px;
+      }
+    
+      .w3-display-left {
+        padding: 24px;
+      }
+    
+      .social-icons {
+        padding: 12px 24px;
+      }
+    }
+    
+    @media (min-width: 320px) {
+      .w3-bar .w3-button {
+        padding: 12px;
+      }
+    
+      .w3-display-left {
+        padding: 10px;
+      }
+    
+      .social-icons {
+        padding: 12px 24px;
+      }
+    }
+    @media only screen and (max-width: 768px) {
+                .text-banner-container {
+                    font-size: 18px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                .tab-titles{
+                  margin: 0px 0 40px; /*0 top, 0 lr, 40 bottom*/
+                }
+            }
+       
+    </style>
+    <style>
+      .mySlides {display:none}
+      .w3-left, .w3-right, .w3-badge {cursor:pointer}
+      .w3-badge {height:13px;width:13px;padding:0}
+    </style>    
+</head>
+<body oncontextmenu="return false;">
+  <!--Loading-->
+
+<div class="loader"></div>
+<script>
+    window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+
+    loader.classList.add("loader--hidden");
+
+    loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+    });
+    });
+</script>
+<script src="../load.js"></script>
+
+    <!-- Navbar (sit on top) -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html" onclick="scrollToCustomView()">
+      <span style="color: #414141;font-family:Your Elegant Font, serif;font-weight: 1000;">Muhammad</span><span style="color: #131313; font-family:Your Elegant Font, serif;font-weight: 1200;"> Sushil</span>
+    </a>
+    <button class="navbar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../about/about.html"><i class="fa fa-user"></i> ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="fa fa-thumbs-up"></i> OUTSOURCING</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../work/work.html"><i class="fa fa-briefcase"></i> WORKS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../contact/contact.html"><i class="fa fa-envelope"></i> CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+    <!-- Sidebar for mobile -->
+    <div id="sidebar" class="sidebar">
+     <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">×</a>
+     <a href="../about/about.html" onclick="toggleSidebar()">ABOUT</a>
+     <a href="#" onclick="toggleSidebar()">OUTSOURCING</a>
+     <a href="../work/work.html" onclick="toggleSidebar()">WORKS</a>
+     <a href="../contact/contact.html" onclick="toggleSidebar()">CONTACT</a>
+    </div>
+  
+    <!-- Overlay for sidebar -->
+    <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/discuss.jpg" alt="Los Angeles" width="1100" height="500">
+          <div class="carousel-caption">
+            <h3>Innovation & Trends</h3>
+          </div>   
+        </div>
+        <div class="carousel-item">
+          <img src="images/environment-office.jpg" alt="Chicago" width="1100" height="500">
+          <div class="carousel-caption">
+            <h3>Manageable Solution</h3>
+          </div>   
+        </div>
+        <div class="carousel-item">
+          <img src="images/phone.jpg" alt="New York" width="1100" height="500">
+          <div class="carousel-caption">
+            <h3>Cost-Efficiency</h3>
+          </div>   
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+
+    <div class="ticker-wrap">
+      <div class="ticker">
+          <div class="ticker__item">Enhance profits, loyalty with exceptional user experiences. Invest wisely now!</div>
+          <div class="ticker__item">Captivate. Convert. Elevate. Unleash your brand's potential with us.</div>
+          <div class="ticker__item">Innovate. Collaborate. Elevate. Trust us.</div>
+          <div class="ticker__item">Muhammad Sushil bridges cultural gaps, amplifying your brand's Asian resonance.</div>
+          <div class="ticker__item">Transform interactions. Amplify satisfaction. Elevate loyalty. Empower success. Experience the difference. Elevate your business today!</div>
+          <div class="ticker__item">Transform UX. Ignite Success. Partner with us now.</div>
+          <div class="ticker__item">Biggest outsourced choice trusted by big companies for reliability, innovation, and unparalleled solutions. Join us now!</div>
+          <div class="ticker__item">We specialize in website and mobile app design, along with digital design solutions tailored to elevate your business presence.</div>
+          <div class="ticker__item">Digitalize your business ideas into valued asssets with us.</div>
+          <div class="ticker__item">Unlock innovation with our comprehensive R&D services, empowering your business to stay ahead in today's dynamic market landscape.</div>
+          <div class="ticker__item">Leverage your limited sources with Muhammad Sushil.</div>
+          <div class="ticker__item">We design your business into infinite potential.</div>
+          <div class="ticker__item">We know your values.</div>
+          <div class="ticker__item">Understanding complex humans is our expertise. That's how business strategies start to exist.</div>
+        </div>
+    </div>
+    <script src="newsticker.js"></script>
+
+    <!-- Header -->
+    <div class="w3-container" style="margin-top:10px; padding-bottom: 30px;" id="showcase">
+      <h1 class="w3-jumbo"><b>We Do</b></h1>
+      <h1 class="w3-xxxlarge w3-text-dark-grey"><b>Outsourcing.</b></h1>
+    </div>
+    
+<!-- First Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center" style="max-width: 100%;"> <!-- Limit the width of the image -->
+      <img src="images/icon3.png" style="max-width: 100%; height: auto;"> <!-- Maintain aspect ratio -->
+    </div>
+
+    <div class="w3-twothird" style="padding-left: 50px;">
+      <h1>User Experience Design</h1>
+      <h5 class="w3-padding-32">User Experience Design is about crafting digital interfaces that prioritize user satisfaction by focusing on usability, accessibility, and intuitiveness to enhance the overall interaction with a product or service.</h5>
+
+      <p class="w3-text-grey">In today's digital age, where competition is fierce, providing exceptional user experiences is paramount. It not only builds customer loyalty and satisfaction but also drives conversions and boosts brand reputation. For businesses, especially SMEs, investing in UX design can differentiate them from competitors and pave the way for long-term success in the market.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-white w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Website Development</h1>
+      <h5 class="w3-padding-32">Website Development crafts tailored online platforms for businesses, encapsulating branding, marketing, and sales strategies to reach and engage with target audiences, enhancing visibility, credibility, and growth in the digital realm.</h5>
+
+      <p class="w3-text-grey">Even in the age of social media dominance, websites are indispensable for businesses. They offer a central hub for branding, marketing, and sales, providing unparalleled control over content and user experience. A well-developed website establishes credibility, professionalism, and trustworthiness, essential for attracting and retaining customers. In a constantly evolving digital landscape, investing in website development ensures sustained relevance and competitiveness, driving growth and success for businesses of all sizes.</p>
+    </div>
+    
+    <div class="w3-third w3-center" style="max-width: 100%;"> <!-- Limit the width of the image -->
+      <img src="images/icon2.png" style="max-width: 100%; height: auto; padding-left: 50px;"> <!-- Maintain aspect ratio -->
+    </div>
+  </div>
+</div>
+
+<!-- Third Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center" style="max-width: 100%;"> <!-- Limit the width of the image -->
+      <img src="images/icon1.png" style="max-width: 100%; height: auto;"> <!-- Maintain aspect ratio -->
+    </div>
+
+    <div class="w3-twothird" style="padding-left: 50px;">
+      <h1>Digital Business Solution</h1>
+      <h5 class="w3-padding-32">Tech-forward business solutions offer comprehensive strategies and tools to optimize operations, streamline processes, and enhance productivity for businesses in the digital age.</h5>
+
+      <p class="w3-text-grey">Businesses flourish through savvy online strategies. Tailored digital solutions empower brands, driving engagement and ensuring sustained relevance. Elevate your online presence with expert consultations, optimizing operations for success in the dynamic world of digital business.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+  <div class="w3-center">
+    <br><br>
+  <h4>MAXIMISE YOUR BUSINESS CHANNEL</h4>
+  <h1 class="w3-xxxlarge w3-animate-bottom">Outsourcing With Muhammad Sushil</h1>
+    <div class="w3-padding-32">
+      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="window.location.href='/contact/contact.html';" style="font-weight:900;">TALK TO US TODAY</button>
+    </div>
+  </div>
+</header>
+
+<!--Teasing Section-->
+<div class="card-container">
+  <div class="card">
+      <video autoplay loop>
+          <source src="images/app_promo1.mp4" type="video/mp4">
+      </video>
+      <div class="card-content">
+          <h3>Prototype Demo</h3>
+          <p>Event App</p>
+          <a onclick="window.location.href='/contact/contact.html';" class="btn">Request</a>
+      </div>
+  </div>
+  <div class="card">
+      <video autoplay loop>
+          <source src="images/app_promo2.mp4" type="video/mp4">
+      </video>
+      <div class="card-content">
+          <h3>Prototype Demo</h3>
+          <p>SME App</p>
+          <a onclick="window.location.href='/contact/contact.html';" class="btn">Request</a>
+      </div>
+  </div>
+  <div class="card">
+      <video autoplay loop>
+          <source src="images/app_promo3.mp4" type="video/mp4">
+      </video>
+      <div class="card-content">
+          <h3>Prototype Demo</h3>
+          <p>Booking App</p>
+          <a onclick="window.location.href='/contact/contact.html';" class="btn">Request</a>
+      </div>
+  </div>
+</div>
+
+  <!--Footer Section-->
+ <footer class="text-white text-center text-lg-start bg-black">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!--Grid row-->
+    <div class="row mt-4">
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-4">About company</h5>
+
+        <p>
+          Muhammad Sushil is a company with a medium-sized team based in Sarawak. The name 'Muhammad Sushil' also serves as a unique brand identity.
+        </p>
+
+        <p>
+          The founder Muhammad Sushil oversees all operations, but he does not work alone behind the scenes. All decisions are made collectively by his team.
+        </p>
+
+        <div class="mt-4">
+         <!-- Facebook -->
+         <a href="https://www.linkedin.com/in/muhammadsushil" target="_blank" type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-linkedin"></i></a>
+         <!-- Google + -->
+         <a href="mailto: mrshil884@gmail.com" target="_blank" type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-google"></i></a>
+         <img src="../assets/footer.png" width="47" height="45" style="border-radius: 4px;">
+        </div>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-4 pb-1">Know More</h5>
+        <div class="form-outline form-white mb-4">
+          <button type="submit" class="btn btn-outline-light mb-4" onclick="window.location.href='/contact/contact.html';">
+            Ask Us
+          </button>
+        </div>
+
+        <ul class="fa-ul" style="margin-left: 1.65em;">
+          <li class="mb-3">
+            <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Kuching, 93250, Sarawak</span>
+          </li>
+          <li class="mb-3">
+            <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">mrshil884@gmail.com</span>
+          </li>
+          <li class="mb-3">
+            <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+60168399849</span>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-4">Opening hours &#40;Malaysia&nbsp;Time&#41;</h5>
+
+        <table class="table text-center text-white">
+          <tbody class="fw-normal">
+            <tr>
+              <td>Mon - Thu:</td>
+              <td>8am - 12pm</td>
+            </tr>
+            <tr>
+              <td>Fri - Sat:</td>
+              <td>10am - 1pm</td>
+            </tr>
+            <tr>
+              <td>Sunday:</td>
+              <td>10am - 1pm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgb(0, 0, 0);">
+    © 2024 Copyright:
+    <a class="text-white" style="text-decoration: none;">Owned by Muhammad Sushil</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+  
+  <!-- Bootstrap JS, jQuery, and custom JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+<script>
+  function toggleSidebar() { 
+    var sidebar = document.getElementById("sidebar");
+    var overlay = document.getElementById("overlay");
+    if (sidebar.classList.contains('active')) {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+    } else {
+      sidebar.classList.add('active');
+      overlay.classList.add('active');
+    }
+  }
+</script>
+
+  <script>
+  // Toggle between showing and hiding the sidebar when clicking the menu icon
+  var mySidebar = document.getElementById("mySidebar");
+  
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+  
+  // Close the sidebar with the close button
+  function w3_close() {
+      mySidebar.style.display = "none";
+  }
+  </script>
+  
+  <script>
+  function scrollToCustomView() {
+    const header = document.getElementById('header');
+    const about = document.getElementById('about');
+
+    const headerRect = header.getBoundingClientRect();
+    const aboutRect = about.getBoundingClientRect();
+
+    const scrollToY = window.scrollY + headerRect.top + (headerRect.height / 21);
+
+    window.scrollTo({
+      top: scrollToY,
+      behavior: 'smooth'
+    });
+  }
+</script>
+<script>
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" w3-white", "");
+    }
+    dots[myIndex-1].className += " w3-white";
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+
+  function plusDivs(n) {
+    showDivs(myIndex += n);
+  }
+
+  function currentDiv(n) {
+    showDivs(myIndex = n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) {myIndex = 1}    
+    if (n < 1) {myIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" w3-white", "");
+    }
+    x[myIndex-1].style.display = "block";  
+    dots[myIndex-1].className += " w3-white";
+  }
+</script>
+</body>
+</html>

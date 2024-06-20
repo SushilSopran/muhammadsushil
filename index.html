@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+            e.preventDefault();
+        }
+    });
+</script>
+<title>Muhammad Sushil | Digital Solution Provider</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="loading.css">
+<!--Favicon-->
+<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="icon" type="image/x-icon" href="/assets/favicon.png" class="icon">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<!--For mobile app icon-->
+<!-- For iOS -->
+<link rel="apple-touch-icon" href="/assets/app-icon.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/assets/app-icon.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/assets/app-icon.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/assets/app-icon.png">
+<!-- For Android -->
+<link rel="manifest" href="andoid.json">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Include Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Other meta tags and stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+   * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+      background-color: #f3f3f3;
+    }
+    .hero {
+        background-color: #ffffff;
+        position: relative;
+        height: 100vh; /* Adjusted height for full viewport height */
+        overflow: hidden;
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero__title {
+        --b: 3px;
+        --s: .15em;
+        --c: #373B44;
+        padding: calc(.05em + var(--s)) calc(.3em + var(--s));
+        color: var(--c);
+        --_p: var(--s);
+        background: conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--c) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+        transition: .3s linear, color 0s, background-color 0s;
+        outline: var(--b) solid #0000;
+        outline-offset: .2em;
+        font-family: system-ui, sans-serif;
+        font-weight: bold;
+        font-size: 2rem;
+        cursor: pointer;
+        border: none;
+        margin: 0;
+        text-align: center;
+    }
+
+    .hero__title:hover,
+    .hero__title:focus-visible {
+        --_p: 0px;
+        outline-color: var(--c);
+        outline-offset: .05em;
+        text-decoration: none;
+        color: #181818;
+    }
+
+    .hero__title:active {
+        background: var(--c);
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .circle {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #181818;
+        transform: scale(0);
+        animation: circle 12s ease-in forwards infinite;
+    }
+
+    .circle:nth-child(2n) {
+        background-color: #686868;
+    }
+
+    .circle:nth-child(2) {
+        animation-delay: 2s;
+        left: 25vw;
+        top: 40vh;
+    }
+
+    .circle:nth-child(3) {
+        animation-delay: 4s;
+        left: 75vw;
+        top: 50vh;
+    }
+
+    .circle:nth-child(4) {
+        animation-delay: 6s;
+        left: 90vw;
+        top: 10vh;
+    }
+
+    .circle:nth-child(5) {
+        animation-delay: 8s;
+        left: 10vw;
+        top: 85vh;
+    }
+
+    .circle:nth-child(6) {
+        animation-delay: 10s;
+        left: 50vw;
+        top: 10vh;
+    }
+
+    @keyframes circle {
+        from {
+            transform: scale(0);
+            opacity: 1;
+        }
+        to {
+            transform: scale(20);
+            opacity: 0;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        /* Adjustments for smaller screens */
+        .hero__title {
+            font-size: 1.5rem;
+         }
+   }
+
+</style>
+<style>
+/* Custom styles */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("assets/banner.jpg");
+  min-height: 100%;
+}
+
+.navbar-toggler {
+      border: none;
+    }
+
+    .navbar-toggler:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #111;
+      transition: 0.3s;
+      padding-top: 60px;
+      z-index: 1030;
+    }
+
+    .sidebar a {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidebar .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 1020;
+    }
+
+    .overlay.active {
+      display: block;
+    }
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Ensure responsive design */
+@media (max-width: 600px) {
+  .w3-bar .w3-button {
+    padding: 12px;
+  }
+
+  .w3-display-left {
+    padding: 24px;
+  }
+
+  .social-icons {
+    padding: 12px 24px;
+  }
+}
+
+@media (min-width: 320px) {
+  .w3-bar .w3-button {
+    padding: 12px;
+  }
+
+  .w3-display-left {
+    padding: 10px;
+  }
+
+  .social-icons {
+    padding: 12px 24px;
+  }
+}
+
+.text-banner-container {
+            height: 100vh;
+            text-align: center; /* Center the text horizontally */
+            text-justify:auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
+            color: #ffffff;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation-delay: 2s;
+            animation: text-banner 7s infinite linear;
+            animation-fill-mode: forwards;
+            -webkit-text-size-adjust: none;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 24px;
+            padding-left: 20px;
+            padding-right: 20px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .text-banner-container {
+                font-size: 18px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+
+        @keyframes text-banner {
+            0% {
+                background-position: 0;
+            }
+            100% {
+                background-position: 1500px;
+            }
+        }
+</style>
+
+</head>
+<body oncontextmenu="return false;">
+<!--Loading-->
+
+<div class="loader"></div>
+<script>
+    window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+
+    loader.classList.add("loader--hidden");
+
+    loader.addEventListener("transitionend", () => {
+        document.body.removeChild(loader);
+    });
+    });
+</script>
+<script src="load.js"></script>
+
+<!-- Navbar (sit on top) -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#" onclick="scrollToCustomView()"> <!--This allows the scroll moving effect when the button clicked-->
+    <span style="color: #414141;font-family:Your Elegant Font, serif;font-weight: 1000;">Muhammad</span><span style="color: #131313; font-family:Your Elegant Font, serif;font-weight: 1200;"> Sushil</span>
+  </a>
+  <button class="navbar-toggler" type="button" onclick="toggleSidebar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/about/about.html"><i class="fa fa-user"></i> ABOUT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/service/outsourcing.html"><i class="fa fa-thumbs-up"></i> OUTSOURCING</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/work/work.html"><i class="fa fa-briefcase"></i> WORKS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact/contact.html"><i class="fa fa-envelope"></i> CONTACT</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Sidebar for mobile -->
+<div id="sidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">×</a>
+  <a href="/about/about.html" onclick="toggleSidebar()">ABOUT</a>
+  <a href="/service/outsourcing.html" onclick="toggleSidebar()">OUTSOURCING</a>
+  <a href="/work/work.html" onclick="toggleSidebar()">WORKS</a>
+  <a href="/contact/contact.html" onclick="toggleSidebar()">CONTACT</a>
+</div>
+
+<!-- Overlay for sidebar -->
+<div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+
+<div class="text-banner-container col-md-6 text-center justify-content-center">
+  <p>Muhammad Sushil is a digital expert focuses on innovative solutions towards constructive user experiences</p>
+</div>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 text-white text-center py-5" id="header">
+  <div>
+    <h1 class="display-4 d-none d-sm-block">Your Great Idea | Our Priority</h1>
+    <h2 class="d-block d-sm-none">Your Great Idea | Our Priority</h2>
+    <p class="lead">Improving your business can be done with fresh digital solutions.</p>
+    <a href="/service/outsourcing.html" class="btn btn-outline-light btn-sm">Explore more and start now</a>
+  </div>
+  
+  <style>
+    .social-icons a {
+      color: #1f1f1f; /* Light grey color */
+      transition: color 0.1s ease; /* Smooth transition for color change */
+      font-size: 10px;
+    }
+    .social-icons a:hover {
+      color: #ffffff; /* White color on hover */
+    }
+  </style>
+</header>
+
+<!-- About Section -->
+<div class="w3-container py-5" id="about">
+  <h3 class="text-center">ABOUT US</h3>
+  <p class="text-center lead">Our core qualities</p>
+  <div class="row justify-content-center">
+    <div class="col-md-3 text-center">
+      <i class="fa fa-globe fa-5x"></i>
+      <p class="lead">Responsiveness</p>
+      <p>Our prompt attention delivers quick solutions, seamless support, and satisfied clients.</p>
+    </div>
+    <div class="col-md-3 text-center">
+      <i class="fa fa-gamepad fa-5x"></i>
+      <p class="lead">Passion</p>
+      <p>Our fervor fuels exceptional service, innovation, and client delight consistently.</p>
+    </div>
+    <div class="col-md-3 text-center">
+      <i class="fa fa-pen fa-5x"></i>
+      <p class="lead">Design</p>
+      <p>Our dedication to user experience underscores its pivotal importance to our clients and customers.</p>
+    </div>
+    <div class="col-md-3 text-center">
+      <i class="fa fa-gears fa-5x"></i>
+      <p class="lead">Support</p>
+      <p>Our dynamic support, tailored to you, ensures swift responses and flawless interactions.</p>
+      </div>
+    </div>
+  </div>
+
+  <!--Entertainment Section-->
+  <header class="hero">
+    <a class="hero__title" href="vidgame.html">DON'T CLICK</a>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circles"></div>
+ </header>
+
+ <!--Footer Section-->
+ <footer class="text-white text-center text-lg-start bg-black">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!--Grid row-->
+    <div class="row mt-4">
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-4">About company</h5>
+
+        <p>
+          Muhammad Sushil is a company with a medium-sized team based in Sarawak. The name 'Muhammad Sushil' also serves as a unique brand identity.
+        </p>
+
+        <p>
+          The founder Muhammad Sushil oversees all operations, but he does not work alone behind the scenes. All decisions are made collectively by his team.
+        </p>
+
+        <div class="mt-4">
+         <!-- Facebook -->
+         <a href="https://www.linkedin.com/in/muhammadsushil" target="_blank" type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-linkedin"></i></a>
+         <!-- Google + -->
+         <a href="mailto: mrshil884@gmail.com" target="_blank" type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-google"></i></a>
+         <img src="assets/footer.png" width="47" height="45" style="border-radius: 4px;">
+        </div>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-4 pb-1">Know More</h5>
+        <div class="form-outline form-white mb-4">
+          <button type="submit" class="btn btn-outline-light mb-4" onclick="window.location.href='/contact/contact.html';">
+            Ask Us
+          </button>
+        </div>
+
+        <ul class="fa-ul" style="margin-left: 1.65em;">
+          <li class="mb-3">
+            <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Kuching, 93250, Sarawak</span>
+          </li>
+          <li class="mb-3">
+            <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">mrshil884@gmail.com</span>
+          </li>
+          <li class="mb-3">
+            <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+60168399849</span>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase mb-4">Opening hours &#40;Malaysia&nbsp;Time&#41;</h5>
+
+        <table class="table text-center text-white">
+          <tbody class="fw-normal">
+            <tr>
+              <td>Mon - Thu:</td>
+              <td>8am - 12pm</td>
+            </tr>
+            <tr>
+              <td>Fri - Sat:</td>
+              <td>10am - 1pm</td>
+            </tr>
+            <tr>
+              <td>Sunday:</td>
+              <td>10am - 1pm</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgb(0, 0, 0);">
+    © 2024 Copyright:
+    <a class="text-white" style="text-decoration: none;">Owned by Muhammad Sushil</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+  <!-- Bootstrap JS, jQuery, and custom JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+<script>
+  function toggleSidebar() { 
+    var sidebar = document.getElementById("sidebar");
+    var overlay = document.getElementById("overlay");
+    if (sidebar.classList.contains('active')) {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+    } else {
+      sidebar.classList.add('active');
+      overlay.classList.add('active');
+    }
+  }
+</script>
+
+  <script>
+  // Toggle between showing and hiding the sidebar when clicking the menu icon
+  var mySidebar = document.getElementById("mySidebar");
+  
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+  
+  // Close the sidebar with the close button
+  function w3_close() {
+      mySidebar.style.display = "none";
+  }
+  </script>
+  
+  <script>
+  function scrollToCustomView() {
+    const header = document.getElementById('header');
+    const about = document.getElementById('about');
+
+    const headerRect = header.getBoundingClientRect();
+    const aboutRect = about.getBoundingClientRect();
+
+    const scrollToY = window.scrollY + headerRect.top + (headerRect.height / 21);
+
+    window.scrollTo({
+      top: scrollToY,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+  
+  <!--Bootstrap 4.5.2.-->
+  <!--It Provides pre-designed components and a responsive grid system-->
+  <!--Ensure consistency and compatibility across different devices and screen sizes.-->
